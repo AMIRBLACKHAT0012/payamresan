@@ -6,8 +6,8 @@ JSON = require('dkjson')
 HTTPS = require('ssl.https')
 dofile('utilities.lua')
 ----config----
-local bot_api_key = "229913245:AAG1E_litpnSJUJUNexG6JaChq8Jez4U0pQ" --BOT TOKEN 
-local You = 164005083 --ID ADMIN 
+local bot_api_key = "143116735:AAE3hz2ap-xHFumXlJcKP035AVVoFfnXuL4" --BOT TOKEN 
+local You = 140010873 --ID ADMIN 
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[ با سلام خدمت شما ]]
@@ -33,7 +33,7 @@ local help = [[
 `/id` 😑😊️
 ایدی
 ➖➖➖➖➖➖➖➖➖➖➖
-@ultra_T_g_bot
+@IRAN_DEV_CH
 ]]--
 -------
 
@@ -263,7 +263,7 @@ function bot_run()
 	if not ban then
 		ban = load_data('ban.db')
 	end
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nID = "..bot.id.." \n[jon the cruel channel](https://telegram.me/joinchat/Cz0GaD5yj9_VLaNXOOg3ag)"
+	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nID = "..bot.id.." \n[jon  Iran Dev  channel](https://telegram.me/IRAN_DEV_CH)"
 
 	print(bot_info)
 	for k,v in pairs(add.id) do
@@ -363,7 +363,7 @@ user = bot.username
 else
 user = msg.from.username
 end
-local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[ربات خود را بسازید](http://opizo.com/3AGyRT)"
+local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[ربات خود را بسازید](http://telegram.me/IRAN_DEV_CH)"
 sendMessage(msg.chat.id,text.."\n"..start,true,false,true)
 elseif msg.text == "/start" and is_add(msg) then
  	print(#add.id)
@@ -373,7 +373,7 @@ user = bot.username
 else
 user = msg.from.username
 end
-local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[ربات خود را بسازید](http://opizo.com/3AGyRT)"
+local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[ربات خود را بسازید](http://telegram.me/IRAN_DEV_CH)"
 sendMessage(msg.chat.id,text.."\n"..start,true,false,true)
 elseif is_admin(msg) and msg.text == "/users" then
  	local r = tostring(#add.id)
