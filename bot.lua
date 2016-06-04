@@ -6,8 +6,8 @@ JSON = require('dkjson')
 HTTPS = require('ssl.https')
 dofile('utilities.lua')
 ----config----
-local bot_api_key = "143116735:AAFmoEf480DLKf4MrNKThOBpaVOlEgQx-eA" --BOT TOKEN 
-local You = 140010873 --ID ADMIN 
+local bot_api_key = "221305592:AAETyssKTRJml2D0U6pL2aKhhYOa5jU-zpg" --BOT TOKEN 
+local You = 234149968 --ID ADMIN 
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[ با سلام خدمت شما ]]
@@ -33,7 +33,7 @@ local help = [[
 `/id` 😑😊️
 ایدی
 ➖➖➖➖➖➖➖➖➖➖➖
-@IRAN_DEV_CH
+@AMIR_AMIR_AMIR_AMIR_0
 ]]--
 -------
 
@@ -263,7 +263,7 @@ function bot_run()
 	if not ban then
 		ban = load_data('ban.db')
 	end
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nID = "..bot.id.." \n[jon  Iran Dev  channel](https://telegram.me/IRAN_DEV_CH)"
+	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nID = "..bot.id.." \n[PV](https://telegram.me/AMIR_AMIR_AMIR_AMIR_0)"
 
 	print(bot_info)
 	for k,v in pairs(add.id) do
@@ -363,7 +363,7 @@ user = bot.username
 else
 user = msg.from.username
 end
-local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[ربات خود را بسازید](http://telegram.me/IRAN_DEV_CH)"
+local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[به پی ویه من بیایید](http://telegram.me/AMIR_AMIR_AMIR_AMIR_0)"
 sendMessage(msg.chat.id,text.."\n"..start,true,false,true)
 elseif msg.text == "/start" and is_add(msg) then
  	print(#add.id)
@@ -373,7 +373,7 @@ user = bot.username
 else
 user = msg.from.username
 end
-local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[ربات خود را بسازید](http://telegram.me/IRAN_DEV_CH)"
+local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[به پی ویه من بیایید](https://telegram.me/AMIR_AMIR_AMIR_AMIR_0)"
 sendMessage(msg.chat.id,text.."\n"..start,true,false,true)
 elseif is_admin(msg) and msg.text == "/users" then
  	local r = tostring(#add.id)
@@ -391,7 +391,7 @@ end
 if msg.text == "/unbroadcast" then
   add.broadcast = "broadcast"
   save_data('mico.db', add)
-  sendMessage(msg.chat.id,"*I will not broadcast any more*",true,false,true)
+  sendMessage(msg.chat.id,"*☺️من دیگه پیامی به بقیه نمیفرستم☺️*",true,false,true)
 end
 if msg.text ~= "/broadcast" and  add.broadcast ~= "broadcast" then
 if is_admin(msg) then
@@ -409,14 +409,14 @@ end
 elseif msg.text ~= "/" then
 if is_admin(msg) and msg.reply_to_message and msg.reply_to_message.forward_from ~= nil and msg.text == "/ban" then
 table.insert(ban.id,msg.reply_to_message.forward_from.id)
-sendMessage(msg.reply_to_message.forward_from.id,"*YOU HAVE BEEN BANNED*",true,false,true)
+sendMessage(msg.reply_to_message.forward_from.id,"*👍شما از ربات بن شدید👍لطفا سیکتیر کنید😁*",true,false,true)
 elseif is_admin(msg) and msg.reply_to_message and msg.reply_to_message.forward_from ~= nil and msg.text == "/unban" then
 for k, v in pairs(ban["id"]) do
 if ( v == msg.reply_to_message.forward_from.id ) then
 table.remove(ban["id"], k)
 end
 end
-sendMessage(msg.reply_to_message.forward_from.id,"*YOU HAVE BEEN unBANNED*",true,false,true)
+sendMessage(msg.reply_to_message.forward_from.id,"*😍شما از ربات از بن خارج شدید😊خوش امدید😊*",true,false,true)
 elseif is_admin(msg) and msg.reply_to_message and msg.text == "/id" then
  if msg.reply_to_message.forward_from.last_name ~= nil then
  	 last_name = msg.reply_to_message.forward_from.last_name
@@ -428,13 +428,13 @@ elseif is_admin(msg) and msg.reply_to_message and msg.text == "/id" then
  else
  	 usernme = ""
  end
- local E = "NAME : "..msg.reply_to_message.forward_from.first_name.." "..last_name..usernme.."\nID :"..msg.reply_to_message.forward_from.id
+ local E = "اسم : "..msg.reply_to_message.forward_from.first_name.." "..last_name..usernme.."\nایدی :"..msg.reply_to_message.forward_from.id
  sendMessage(msg.chat.id,E)
 
 elseif is_admin(msg) and msg.text == "/broadcast" then
 
   add.broadcast = "unbroadcast"
-    sendMessage(msg.chat.id,"*I will send every thing u want*",true,false,true)
+    sendMessage(msg.chat.id,"*😉من هر چیزی رو که شما بخواید رو به همه میفرستم😉*",true,false,true)
 save_data('mico.db', add)
 
 
