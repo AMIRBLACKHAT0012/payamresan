@@ -10,7 +10,7 @@ local bot_api_key = "221305592:AAETyssKTRJml2D0U6pL2aKhhYOa5jU-zpg" --BOT TOKEN
 local You = 234149968 --ID ADMIN 
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
-local start = [[ با سلام خدمت شما ]]
+local start = [[😘خوش امدید😘]]
 
 -------
 
@@ -33,7 +33,7 @@ local help = [[
 `/id` 😑😊️
 ایدی
 ➖➖➖➖➖➖➖➖➖➖➖
-@AMIR_AMIR_AMIR_AMIR_0
+
 ]]--
 -------
 
@@ -263,7 +263,7 @@ function bot_run()
 	if not ban then
 		ban = load_data('ban.db')
 	end
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nID = "..bot.id.." \n[PV](https://telegram.me/AMIR_AMIR_AMIR_AMIR_0)"
+	local bot_info = "نام کاربری = @"..bot.username.."\nNاسم = "..bot.first_name.."\nایدی = "..bot.id.." \n[PV](https://telegram.me/AMIR_GORGAM)"
 
 	print(bot_info)
 	for k,v in pairs(add.id) do
@@ -329,7 +329,7 @@ msg.from.username = '@'..msg.from.username
 elseif msg.from.username == nil then
 msg.from.username = "you don't have"
 end
-local caption = 'your nam :- '..msg.from.first_name..'\nyour id :-'..msg.from.id..'\nyour username :- '..msg.from.username
+local caption = 'اسم شما :- '..msg.from.first_name..'\nایدیه شما :- '..msg.from.id..'\nنام کاربری شما :- '..msg.from.username
 
 	sendPhotoID(msg.chat.id,file,caption)
 elseif msg.text:match('/id (.*)$') then
@@ -363,7 +363,7 @@ user = bot.username
 else
 user = msg.from.username
 end
-local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[به پی ویه من بیایید](http://telegram.me/AMIR_AMIR_AMIR_AMIR_0)"
+local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[به پی وی من بیایید] (http://telegram.me/AMIR_GORGAM)"
 sendMessage(msg.chat.id,text.."\n"..start,true,false,true)
 elseif msg.text == "/start" and is_add(msg) then
  	print(#add.id)
@@ -373,7 +373,7 @@ user = bot.username
 else
 user = msg.from.username
 end
-local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[به پی ویه من بیایید](https://telegram.me/AMIR_AMIR_AMIR_AMIR_0)"
+local text = "سلام ["..msg.from.first_name.."](www.telegram.me/"..user..")\n\n[به پی ویه من بیایید](https://telegram.me/AMIR_GORGAM)"
 sendMessage(msg.chat.id,text.."\n"..start,true,false,true)
 elseif is_admin(msg) and msg.text == "/users" then
  	local r = tostring(#add.id)
