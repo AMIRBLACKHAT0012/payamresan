@@ -10,7 +10,9 @@ local bot_api_key = "221305592:AAETyssKTRJml2D0U6pL2aKhhYOa5jU-zpg" --BOT TOKEN
 local You = 234149968 --ID ADMIN 
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
-local start = [[😘خوش امدید😘]]
+local start = [[
+😘خوش امدید😘
+]]
 
 -------
 
